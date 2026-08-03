@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7b6c8" />
+  <title>For My Yara ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <div id="petals" aria-hidden="true"></div>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <main class="experience">
+    <header class="topbar">
+      <p>made with all my love</p>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Play background music">♪ <span>Music</span></button>
+    </header>
+
+    <section class="scrapbook-wrap" aria-label="A birthday scrapbook for Yara">
+      <div id="book" class="scrapbook">
+        <article class="page cover" data-density="hard">
+          <div class="cover-inner">
+            <p class="tiny-note">a little book for</p>
+            <h1>Yara</h1>
+            <div class="heart-sticker">♡</div>
+            <p class="cover-message">Happy Birthday,<br />my favorite person.</p>
+            <p class="turn-hint">turn the page <span>→</span></p>
+          </div>
+        </article>
+
+        <article class="page paper-page memories-page">
+          <div class="page-heading">
+            <span>01</span>
+            <h2>Little moments,<br />big feelings.</h2>
+          </div>
+          <div class="polaroid photo-one tilt-left">
+            <img src="images/photo1.png" alt="A favorite memory of Yara" />
+            <p>you make everything brighter ♡</p>
+          </div>
+          <div class="polaroid photo-two tilt-right">
+            <img src="images/photo2.png" alt="Another favorite memory together" />
+            <p>my happy place</p>
+          </div>
+          <span class="doodle flower">✿</span>
+          <span class="doodle sparkle">✦</span>
+          <p class="margin-note">all my favorite days<br />have you in them.</p>
+        </article>
+
+        <article class="page paper-page letter-page">
+          <span class="date-stamp">for your birthday</span>
+          <h2>Dear Yara,</h2>
+          <div class="letter-text">
+            <p>I hope today reminds you of just how loved you are and special to me.</p>
+            <p>You bring softness, laughter, and so much light into my world. Every memory with you is one I want to keep forever my kitty.</p>
+            <p>Thank you for being exactly you. I hope this year brings you memories with me, exciting dreams, and a thousand reasons to smile and live.</p>
+            <p>And wherever life takes us, please remember that I am always cheering for you and supporting you darling.</p>
+          </div>
+          <p class="signature">with all my love,<br /><span>yours ♡</span></p>
+          <span class="doodle heart-doodle">♥</span>
+        </article>
+
+        <article class="page paper-page memories-page second-memories">
+          <div class="page-heading">
+            <span>02</span>
+            <h2>More reasons<br />to adore you.</h2>
+          </div>
+          <div class="polaroid photo-three tilt-right">
+            <img src="images/photo3.png" alt="A cherished photo of Yara" />
+            <p>pretty memories</p>
+          </div>
+          <div class="polaroid photo-four tilt-left">
+            <img src="images/photo4.png" alt="One more cherished photo" />
+            <p>us, always ♡</p>
+          </div>
+          <p class="list-note">things I love about you:</p>
+          <ul class="love-list">
+            <li>your beautiful heart</li>
+            <li>the way you make me laugh</li>
+            <li>every little thing</li>
+          </ul>
+          <span class="doodle star">★</span>
+        </article>
+
+        <article class="page finale" data-density="hard">
+          <div class="finale-inner">
+            <span class="mini-hearts">♡ ♡ ♡</span>
+            <p class="tiny-note">one last thing...</p>
+            <h2>You deserve<br />the whole world.</h2>
+            <p>But for now, I made you this little piece of mine.</p>
+            <button id="loveButton" type="button">Tap me :3</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="mobile-hint">Swipe or drag the pages to turn them</p>
+  </main>
+
+  <div class="popup" id="lovePopup" role="dialog" aria-modal="true" aria-labelledby="popupMessage" hidden>
+    <div class="popup-card">
+      <button class="close-popup" id="closePopup" type="button" aria-label="Close">×</button>
+      <span class="popup-heart">♥</span>
+      <p id="popupMessage">I love you my Yara ❤️</p>
+      <span class="popup-sparkles">✦ ✧ ✦</span>
+    </div>
+  </div>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="pageFlipSound" preload="auto">
+    <source src="pageflip.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
